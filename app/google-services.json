@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "759086467413",
+    "firebase_url": "https://auth-d7e66-default-rtdb.firebaseio.com",
+    "project_id": "auth-d7e66",
+    "storage_bucket": "auth-d7e66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759086467413:android:6b7e401e6fa02a792987dc",
+        "android_client_info": {
+          "package_name": "com.example.foodboxx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759086467413-7q4scar0b6dqt371ohqpu9t0hqh28528.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2R7Jr0eRcHPx4nxBejDaiFAqyCLqnM_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759086467413-7q4scar0b6dqt371ohqpu9t0hqh28528.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

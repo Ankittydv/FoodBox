@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtfood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="@string/food_box"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/txtfillwarmth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/for_meals_that_fill_you_with_warmth"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:padding="6dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/txtfood"/>
+
+    <Button
+        android:id="@+id/btnuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="6dp"
+        android:layout_below="@id/txtfillwarmth"
+        android:background="@color/purple_500"
+        android:text="@string/user"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btnvendor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="6dp"
+        android:layout_below="@id/btnuser"
+        android:background="@color/purple_500"
+        android:text="@string/vendor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+
+</RelativeLayout>
