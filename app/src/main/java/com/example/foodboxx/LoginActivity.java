@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -49,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void init() {
 
-        email = findViewById(R.id.etMobileNumber);
+        email = findViewById(R.id.etemail);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         btnForgetPassword = findViewById(R.id.btnForgetPassword);
@@ -101,14 +102,14 @@ public class LoginActivity extends AppCompatActivity {
             etPassword.requestFocus();
             return;
         } else {
-            auth.signInWithEmailAndPassword(emailString, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            auth.signInWithEmailAndPassword(emailString, Password)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()) {
-                        Intent main = new Intent (LoginActivity.this,MainActivity.class);
+                        Intent main = new Intent (LoginActivity.this,DashboardActivity.class);
                         startActivity(main);
                     }else {
-                        etPassword.setError("Invalid Password");
                         Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
                     }
                 }

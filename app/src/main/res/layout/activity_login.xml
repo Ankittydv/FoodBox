@@ -7,6 +7,8 @@
     android:background="@color/white"
     tools:context=".LoginActivity">
 
+
+
     <TextView
         android:id="@+id/txtlogin"
         android:layout_width="match_parent"
@@ -19,18 +21,16 @@
         android:gravity="center"/>
 
     <EditText
-        android:id="@+id/etMobileNumber"
+        android:id="@+id/etemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtlogin"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:inputType="phone"
         android:maxLines="1"
-        android:maxLength="10"
         android:padding="6dp"
-        android:hint="@string/enter_mobile_number"/>
+        android:hint="Email"/>
 
     <EditText
         android:id="@+id/etPassword"
@@ -39,7 +39,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_below="@id/etMobileNumber"
+        android:layout_below="@id/etemail"
         android:inputType="textPassword"
         android:maxLines="1"
         android:hint="@string/password"/>

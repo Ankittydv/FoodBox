@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -24,6 +25,7 @@ public class SignupActivity extends AppCompatActivity {
     private Button btnsignup;
     private ProgressBar progressBar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,7 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     private void initt() {
+
 
         etname = findViewById(R.id.etname);
         etaddress = findViewById(R.id.etaddress);
@@ -112,9 +115,11 @@ public class SignupActivity extends AppCompatActivity {
 
                            FirebaseDatabase.getInstance().getReference("users")
                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                   .setValue(user).addOnSuccessListener(sucess -> {
+                                   .setValue(user)
+                                   .addOnSuccessListener(sucess -> {
                                Toast.makeText(SignupActivity.this, "Success db", Toast.LENGTH_SHORT).show();
-                           }).addOnFailureListener(fail -> {
+                           })
+                                   .addOnFailureListener(fail -> {
                                Toast.makeText(SignupActivity.this, "failed db", Toast.LENGTH_SHORT).show();
                            });
 
