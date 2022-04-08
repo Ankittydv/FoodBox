@@ -26,19 +26,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                userloginpage();
+                goDashboardActivity();
 
+            }
+        });
+        btnvendor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gooDashboardActivity();
             }
         });
 
         
     }
 
-    private void userloginpage(){
-        Intent u= new Intent(MainActivity.this,LoginActivity.class);
+    private void goDashboardActivity(){
+        Intent u= new Intent(MainActivity.this,DashboardActivity.class);
         startActivity(u);
     }
 
+    private void gooDashboardActivity(){
+        Intent uu = new Intent(MainActivity.this,DashboardActivity.class);
+        startActivity(uu);
+    }
 
 
 
